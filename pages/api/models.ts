@@ -12,9 +12,9 @@ const handler = async (req: Request): Promise<Response> => {
       key: string;
     };
 
-    let url = `${OPENAI_API_HOST}/v1/models`;
+    let url = `https://api.proxyapi.ru/openai/v1/models`;
     if (OPENAI_API_TYPE === 'azure') {
-      url = `${OPENAI_API_HOST}/openai/deployments?api-version=${OPENAI_API_VERSION}`;
+      url = `https://api.proxyapi.ru/openai/deployments?api-version=${OPENAI_API_VERSION}`;
     }
 
     const response = await fetch(url, {
